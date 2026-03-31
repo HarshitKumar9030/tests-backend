@@ -1,13 +1,13 @@
-FROM rust:1.78-bookworm AS builder
+FROM rust:1-bookworm AS builder
 
 WORKDIR /app
 
-COPY Cargo.toml ./
+COPY Cargo.toml Cargo.lock ./
 RUN mkdir -p src && echo "fn main() {}" > src/main.rs
-RUN cargo build --release && rm -rf src
+RUN cargo build --release --locked && rm -rf src
 
 COPY . .
-RUN cargo build --release
+RUN cargo build --release --locked
 
 FROM debian:bookworm-slim
 
