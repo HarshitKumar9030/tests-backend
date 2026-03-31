@@ -3,7 +3,7 @@ services:
     build: .
     container_name: math-test-backend-rust
     ports:
-      - "8080:8080"
+      - "8090:8080"
     environment:
       APP_PORT: 8080
       APP_DB_PATH: /app/data/app.db

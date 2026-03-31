@@ -24,7 +24,7 @@ Directly with Rust:
 cargo run
 ```
 
-Server default URL: http://localhost:8080
+Server default URL: http://localhost:8090
 
 Admin routes require header:
 - x-admin-token: your secret token
@@ -109,7 +109,7 @@ Fields:
 
 Example:
 ```bash
-curl -X POST http://localhost:8080/api/questions \
+curl -X POST http://localhost:8090/api/questions \
   -F "question_text=Solve: 2*x + 4 = 10" \
   -F "expected_answer=x=3" \
   -F "solution_text=x=3" \
