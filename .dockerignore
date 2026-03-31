@@ -1,0 +1,11 @@
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+uploads
+data
+*.log
+target
+cmd
+go.mod

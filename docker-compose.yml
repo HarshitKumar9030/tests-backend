@@ -1,0 +1,15 @@
+services:
+  backend:
+    build: .
+    container_name: math-test-backend-rust
+    ports:
+      - "8080:8080"
+    environment:
+      APP_PORT: 8080
+      APP_DB_PATH: /app/data/app.db
+      APP_UPLOADS_DIR: /app/uploads
+      APP_ADMIN_TOKEN: change-me-admin-token
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    restart: unless-stopped
